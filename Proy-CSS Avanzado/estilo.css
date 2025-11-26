@@ -1,0 +1,356 @@
+
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+   - Scroll suave (cuando el navegador lo soporta)
+   - Tipografía base
+   - Colores globales
+   ========================================================= */
+html {
+  scroll-behavior: smooth; /* Si el navegador no lo soporta, simplemente no aplica el efecto */
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #050816;
+  color: #f8f9fa;
+  margin: 0; /* Evita márgenes por defecto distintos entre navegadores */
+}
+
+/* =========================================================
+   NAVBAR
+   - Fondo con degradado
+   - Sombra
+   - Efecto hover en enlaces
+   ========================================================= */
+.navbar {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.4);
+  background: #0b1020; /* Color de respaldo */
+  background: linear-gradient(90deg, #0b1020, #111827);
+}
+
+/* Enlaces del menú con transición suave */
+.navbar .nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Subrayado animado debajo del texto */
+.navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0.1rem;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+  color: #38bdf8;
+}
+
+.navbar .nav-link:hover::after {
+  width: 100%;
+}
+
+/* =========================================================
+   HERO / INICIO
+   - Fondo con degradado radial
+   - Halo luminoso con ::before
+   ========================================================= */
+.hero {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1d4ed8 0, #020617 45%, #000 80%);
+  color: #e5e7eb;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efecto de “luz” en la esquina superior derecha */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  background: radial-gradient(circle, rgba(56, 189, 248, 0.24), transparent);
+  top: -100px;
+  right: -80px;
+  filter: blur(2px);
+  transform: translateZ(0);
+}
+
+/* Títulos principales del hero */
+.hero-title {
+  font-size: clamp(2.5rem, 4vw, 3.2rem);
+  font-weight: 700;
+}
+
+.hero-subtitle {
+  font-size: 1.05rem;
+  color: #9ca3af;
+}
+
+/* =========================================================
+   ANIMACIÓN ENTRADA (FADE-IN UP)
+   - Visible en la mayoría de navegadores modernos (Chrome, Edge, Opera, Firefox)
+   ========================================================= */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  -webkit-transform: translateY(30px); /* Safari / navegadores WebKit/Blink */
+  -moz-transform: translateY(30px);    /* Firefox */
+  animation: fadeInUp 0.9s ease-out forwards;
+  -webkit-animation: fadeInUp 0.9s ease-out forwards;
+  -moz-animation: fadeInUp 0.9s ease-out forwards;
+}
+
+/* Retrasos para escalonar la animación */
+.fade-in-up.delay-1 {
+  animation-delay: 0.25s;
+  -webkit-animation-delay: 0.25s;
+  -moz-animation-delay: 0.25s;
+}
+
+.fade-in-up.delay-2 {
+  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+  -moz-animation-delay: 0.5s;
+}
+
+/* Animación clave */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-moz-keyframes fadeInUp {
+  to {
+    opacity: 1;
+    -moz-transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   TARJETAS (.card-tech)
+   - Degradado de fondo
+   - Hover con transformación y sombra
+   ========================================================= */
+.card-tech {
+  background: #020617; /* Respaldo */
+  background: linear-gradient(145deg, #020617, #0b1120);
+  border: 1px solid rgba(148, 163, 184, 0.2);
+  border-radius: 1rem;
+  color: #e5e7eb;
+  box-shadow: 0 0.7rem 1.5rem rgba(15, 23, 42, 0.8);
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  -webkit-transition:
+    -webkit-transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+  -moz-transition:
+    -moz-transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+}
+
+/* Efecto hover: sube un poco y hace zoom suave */
+.card-tech:hover {
+  transform: translateY(-8px) scale(1.02);
+  -webkit-transform: translateY(-8px) scale(1.02);
+  -moz-transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 1.5rem 2.5rem rgba(15, 23, 42, 0.9);
+  border-color: #38bdf8;
+}
+
+.card-tech h5 {
+  color: #f9fafb;
+}
+
+/* =========================================================
+   GALERÍA DE IMÁGENES
+   - Zoom + leve rotación al hover
+   - Transiciones suaves para transform, filtro, sombra
+   ========================================================= */
+.img-gallery img {
+  width: 100%;
+  border-radius: 0.75rem;
+  object-fit: cover;
+  height: 180px;
+  transition:
+    transform 0.5s ease,
+    filter 0.5s ease,
+    box-shadow 0.5s ease;
+  -webkit-transition:
+    -webkit-transform 0.5s ease,
+    filter 0.5s ease,
+    box-shadow 0.5s ease;
+  -moz-transition:
+    -moz-transform 0.5s ease,
+    filter 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+/* Transformación visible para mostrar trabajo con animaciones y transiciones */
+.img-gallery img:hover {
+  transform: scale(1.08) rotate(-1.5deg);
+  -webkit-transform: scale(1.08) rotate(-1.5deg);
+  -moz-transform: scale(1.08) rotate(-1.5deg);
+  filter: brightness(1.12);
+  box-shadow: 0 1rem 2rem rgba(15, 23, 42, 0.9);
+}
+
+/* =========================================================
+   SECCIONES
+   - scroll-margin-top: evita que el título quede debajo del navbar
+   ========================================================= */
+section {
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  color: #38bdf8;
+}
+
+.section-heading {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #f9fafb;
+}
+
+.section-text {
+  color: #9ca3af;
+  font-size: 0.98rem;
+}
+
+/* =========================================================
+   FORMULARIOS
+   - Fondo oscuro
+   - Efecto de foco con borde y sombra azul
+   ========================================================= */
+.form-control,
+.form-select {
+  background-color: #020617;
+  border-color: #1f2937;
+  color: #e5e7eb;
+}
+
+.form-control::placeholder,
+.form-select::placeholder {
+  color: #6b7280; /* Asegura contraste del placeholder entre navegadores */
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.25);
+  background-color: #020617;
+  color: #e5e7eb;
+}
+
+/* =========================================================
+   BOTÓN GRADIENTE
+   - Degradado
+   - Hover: pequeño desplazamiento + zoom
+   ========================================================= */
+.btn-gradient {
+  background: linear-gradient(135deg, #22c55e, #22d3ee);
+  border: none;
+  color: #020617;
+  font-weight: 600;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+  -webkit-transition:
+    -webkit-transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+  -moz-transition:
+    -moz-transform 0.2s ease,
+    box-shadow 0.2s ease,
+    filter 0.2s ease;
+}
+
+.btn-gradient:hover {
+  transform: translateY(-2px) scale(1.01);
+  -webkit-transform: translateY(-2px) scale(1.01);
+  -moz-transform: translateY(-2px) scale(1.01);
+  filter: brightness(1.05);
+  box-shadow: 0 0.8rem 1.6rem rgba(56, 189, 248, 0.45);
+  color: #020617;
+}
+
+/* =========================================================
+   CAROUSEL (SLIDER)
+   - Altura máxima para imágenes
+   - object-fit: cover para recorte
+   ========================================================= */
+.carousel-item img {
+  max-height: 420px;
+  object-fit: cover;
+  filter: brightness(0.9);
+}
+
+/* Caption con fondo degradado semitransparente */
+.carousel-caption {
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.92),
+    rgba(30, 64, 175, 0.9)
+  );
+  border-radius: 0.75rem;
+  padding: 1rem 1.5rem;
+}
+
+/* Indicadores del slider más visibles */
+.carousel-indicators [data-bs-target] {
+  background-color: #38bdf8;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+footer {
+  background: #020617;
+  border-top: 1px solid rgba(148, 163, 184, 0.3);
+  color: #9ca3af;
+  font-size: 0.85rem;
+}
+
+/* =========================================================
+   VIDEO RESPONSIVE
+   ========================================================= */
+.ratio iframe {
+  border-radius: 0.75rem;
+}
+
+/* =========================================================
+   RESPONSIVE (MÓVIL)
+   ========================================================= */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero .btn {
+    width: 100%;
+  }
+}
+

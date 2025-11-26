@@ -1,0 +1,521 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Metadatos básicos -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Descripción para SEO y accesibilidad -->
+  <meta name="description" content="Página informativa sobre Tecnologías Cloud, Inteligencia Artificial y Automatización: historia, tipos, aplicaciones y futuro." />
+
+  <title>Tecnologías Cloud, IA y Automatización</title>
+
+  <!-- Bootstrap CSS (CDN oficial) -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <!-- Hoja de estilos personalizada -->
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+
+
+<body>
+  <!-- =========================================
+       NAVBAR PRINCIPAL
+       ========================================= -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <!-- Branding / Logo de la página -->
+      <a class="navbar-brand fw-bold" href="#inicio">
+        Cloud · IA · Automatización
+      </a>
+
+      <!-- Botón para menú colapsable en móviles -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Mostrar u ocultar navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <!-- Enlaces de navegación -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- Cada enlace apunta a una sección de la página -->
+          <li class="nav-item">
+            <a class="nav-link active" href="#inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tipos.html">Tipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="aplicaciones.html">Aplicaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="futuro.html">Futuro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- =========================================
+       SECCIÓN INICIO / HERO
+       ========================================= -->
+  <!-- 
+    La clase 'hero' se puede definir en tu CSS 
+    para darle altura, fondo, etc.
+  -->
+  <header id="inicio" class="hero d-flex align-items-center">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <!-- Columna de texto principal -->
+        <div class="col-lg-6 fade-in-up">
+          <p class="section-title mb-2">Transformando el mundo digital</p>
+          <h1 class="hero-title mb-3">
+            Tecnologías Cloud, Inteligencia Artificial y Automatización
+          </h1>
+          <p class="hero-subtitle mb-4">
+            La combinación de la nube, la IA y la automatización está cambiando
+            la forma en que trabajamos, aprendemos y nos comunicamos. Conoce su
+            historia, sus tipos, aplicaciones actuales y cómo pueden influir en
+            los próximos años.
+          </p>
+          <!-- Botones de llamada a la acción -->
+          <a href="#historia" class="btn btn-gradient btn-lg me-2">
+            Ver historia
+          </a>
+          <a href="#aplicaciones" class="btn btn-outline-light btn-lg">
+            Casos de uso
+          </a>
+        </div>
+
+        <!-- Columna con carrusel de imágenes (slider) -->
+        <div class="col-lg-6 fade-in-up delay-1">
+          <!-- 
+            Carrusel principal de Bootstrap.
+            Las imágenes ahora usan RUTAS LOCALES dentro de la carpeta 'images'.
+          -->
+          <div
+            id="mainCarousel"
+            class="carousel slide shadow-lg rounded-4 overflow-hidden"
+            data-bs-ride="carousel"
+          >
+            <!-- Indicadores (puntos) del carrusel -->
+            <div class="carousel-indicators">
+              <button
+                type="button"
+                data-bs-target="#mainCarousel"
+                data-bs-slide-to="0"
+                class="active"
+                aria-current="true"
+                aria-label="Cloud"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#mainCarousel"
+                data-bs-slide-to="1"
+                aria-label="IA"
+              ></button>
+              <button
+                type="button"
+                data-bs-target="#mainCarousel"
+                data-bs-slide-to="2"
+                aria-label="Automatización"
+              ></button>
+            </div>
+
+            <!-- Contenido del carrusel -->
+            <div class="carousel-inner">
+              <!-- Slide 1: Cloud -->
+              <div class="carousel-item active">
+                <!-- Imagen local dentro de la carpeta 'images' -->
+                <img
+                  src="images/cloud-hero.jpeg"
+                  class="d-block w-100"
+                  alt="Nube y servidores en un centro de datos"
+                />
+                <div class="carousel-caption text-start">
+                  <h5>Computación en la nube</h5>
+                  <p class="mb-0">
+                    Infraestructura flexible bajo demanda: IaaS, PaaS y SaaS,
+                    accesibles desde cualquier lugar.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 2: IA -->
+              <div class="carousel-item">
+                <img
+                  src="images/ia-hero.jpeg"
+                  class="d-block w-100"
+                  alt="Representación de inteligencia artificial y datos"
+                />
+                <div class="carousel-caption text-start">
+                  <h5>Inteligencia Artificial</h5>
+                  <p class="mb-0">
+                    Algoritmos capaces de aprender, predecir y tomar decisiones
+                    a partir de grandes volúmenes de datos.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Slide 3: Automatización -->
+              <div class="carousel-item">
+                <img
+                  src="images/automatizacion-hero.jpeg"
+                  class="d-block w-100"
+                  alt="Robots y automatización industrial"
+                />
+                <div class="carousel-caption text-start">
+                  <h5>Automatización</h5>
+                  <p class="mb-0">
+                    Robots, RPA y sistemas inteligentes que automatizan tareas
+                    repetitivas y mejoran la eficiencia.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Controles de navegación del carrusel -->
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#mainCarousel"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- =========================================
+       SECCIÓN HISTORIA
+       ========================================= -->
+  <section id="historia" class="py-5">
+    <div class="container">
+      <p class="section-title">Historia</p>
+      <div class="row align-items-start g-4">
+        <!-- Texto descriptivo de la historia -->
+        <div class="col-lg-6">
+          <h2 class="section-heading mb-3">
+            De los mainframes a la nube inteligente
+          </h2>
+          <p class="section-text mb-3">
+            La historia de las tecnologías Cloud, la Inteligencia Artificial y
+            la Automatización se remonta a los primeros grandes computadores
+            centralizados de mediados del siglo XX. Con el tiempo, la potencia
+            de cómputo se fue distribuyendo: pasamos de los mainframes a los
+            servidores locales, y luego a la nube pública y privada.
+          </p>
+          <p class="section-text mb-3">
+            En paralelo, la IA evolucionó desde algoritmos simbólicos hasta el
+            aprendizaje automático y el aprendizaje profundo actual. La
+            automatización comenzó en la industria manufacturera y hoy está
+            presente en procesos administrativos, marketing, logística y
+            atención al cliente.
+          </p>
+          <p class="section-text mb-0">
+            En la actualidad, la convergencia de estos tres pilares permite
+            diseñar soluciones escalables, personalizadas y altamente
+            eficientes, accesibles incluso para pequeñas empresas y usuarios
+            individuales.
+          </p>
+        </div>
+
+        <!-- Video de YouTube incrustado -->
+        <div class="col-lg-6">
+          <!-- 
+            El contenedor 'ratio ratio-16x9' mantiene una relación de aspecto 16:9.
+            Puedes reemplazar el enlace del video por otro que prefieras.
+          -->
+          <div class="ratio ratio-16x9 shadow-lg">
+            <iframe
+              src="https://www.youtube.com/embed/2ePf9rue1Ao"
+              title="Introducción a Cloud Computing"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p class="section-text mt-2">
+            Video de referencia: introducción general a la computación en la
+            nube. Puedes cambiar el enlace por otro video de tu preferencia.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECCIÓN TIPOS
+       ========================================= -->
+  <section id="tipos" class="py-5">
+    <div class="container">
+      <p class="section-title">Tipos</p>
+      <h2 class="section-heading mb-4">
+        Principales tipos de Cloud, IA y Automatización
+      </h2>
+
+      <div class="row g-4">
+        <!-- Tarjeta: Tecnologías Cloud -->
+        <div class="col-md-4">
+          <div class="card-tech p-4 h-100">
+            <h5 class="mb-2">Tecnologías Cloud</h5>
+            <p class="section-text mb-2">
+              La nube permite acceder a recursos de cómputo bajo demanda a
+              través de Internet.
+            </p>
+            <ul class="section-text ps-3">
+              <li><strong>IaaS:</strong> Infraestructura como servicio.</li>
+              <li><strong>PaaS:</strong> Plataformas para desarrollar apps.</li>
+              <li><strong>SaaS:</strong> Aplicaciones completas listas para usar.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta: Inteligencia Artificial -->
+        <div class="col-md-4">
+          <div class="card-tech p-4 h-100">
+            <h5 class="mb-2">Inteligencia Artificial</h5>
+            <p class="section-text mb-2">
+              La IA se clasifica según la forma en que aprende y toma
+              decisiones.
+            </p>
+            <ul class="section-text ps-3">
+              <li><strong>IA débil:</strong> Especializada en tareas concretas.</li>
+              <li><strong>IA fuerte (teórica):</strong> Capaz de razonar como un humano.</li>
+              <li><strong>Machine Learning:</strong> Aprende a partir de datos.</li>
+              <li><strong>Deep Learning:</strong> Redes neuronales profundas.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Tarjeta: Automatización -->
+        <div class="col-md-4">
+          <div class="card-tech p-4 h-100">
+            <h5 class="mb-2">Automatización</h5>
+            <p class="section-text mb-2">
+              Automatizar procesos permite reducir errores y liberar tiempo para
+              tareas de mayor valor.
+            </p>
+            <ul class="section-text ps-3">
+              <li><strong>RPA:</strong> Automatización robótica de procesos.</li>
+              <li><strong>Automatización industrial:</strong> Robots y sensores.</li>
+              <li><strong>Automatización TI:</strong> Scripts, pipelines, DevOps.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECCIÓN APLICACIONES + GALERÍA
+       ========================================= -->
+  <section id="aplicaciones" class="py-5">
+    <div class="container">
+      <p class="section-title">Aplicaciones</p>
+      <div class="row g-4">
+        <!-- Lista de aplicaciones en texto -->
+        <div class="col-lg-6">
+          <h2 class="section-heading mb-3">
+            Usos actuales en empresas y vida diaria
+          </h2>
+          <p class="section-text mb-3">
+            Las tecnologías Cloud, la IA y la Automatización se aplican en casi
+            todos los sectores:
+          </p>
+          <ul class="section-text mb-3">
+            <li><strong>Salud:</strong> diagnóstico asistido por IA, historias clínicas en la nube.</li>
+            <li><strong>Finanzas:</strong> detección de fraude, chatbots y análisis de riesgo.</li>
+            <li><strong>Educación:</strong> plataformas virtuales escalables y personalización del aprendizaje.</li>
+            <li><strong>Industria:</strong> líneas de producción automatizadas y mantenimiento predictivo.</li>
+            <li><strong>Vida diaria:</strong> asistentes virtuales, recomendaciones de contenido y hogares inteligentes.</li>
+          </ul>
+          <p class="section-text">
+            La clave es integrar estas tecnologías de forma ética y responsable,
+            considerando la privacidad, la seguridad y el impacto social.
+          </p>
+        </div>
+
+        <!-- Galería de imágenes (álbum) -->
+        <div class="col-lg-6">
+          <h5 class="mb-3">Álbum de imágenes</h5>
+          <div class="row g-3 img-gallery">
+            <div class="col-6">
+              <img
+                src="images/datacenter.jpeg"
+                alt="Centro de datos moderno con servidores"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="col-6">
+              <img
+                src="images/automatizacion-codigo.jpeg"
+                alt="Código fuente y automatización de procesos"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="col-6">
+              <img
+                src="images/nube-digital.jpeg"
+                alt="Representación visual de nube digital"
+                class="img-fluid rounded"
+              />
+            </div>
+            <div class="col-6">
+              <img
+                src="images/robot-colaborativo.jpeg"
+                alt="Robot colaborativo trabajando con humanos"
+                class="img-fluid rounded"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       SECCIÓN FUTURO + FORMULARIO DE CONTACTO
+       ========================================= -->
+  <section id="futuro" class="py-5">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Texto sobre el futuro de las tecnologías -->
+        <div class="col-lg-6">
+          <p class="section-title">Futuro</p>
+          <h2 class="section-heading mb-3">
+            ¿Hacia dónde se dirigen estas tecnologías?
+          </h2>
+          <p class="section-text mb-3">
+            El futuro apunta a sistemas cada vez más autónomos, capaces de
+            aprender en tiempo real, adaptarse a nuevos contextos y colaborar
+            con las personas. La nube será más distribuida (edge computing), la
+            IA estará integrada en casi todos los dispositivos y la
+            automatización se extenderá a procesos creativos y de toma de
+            decisiones.
+          </p>
+          <p class="section-text mb-3">
+            Al mismo tiempo, surgirán nuevos retos: regulación de la IA,
+            protección de datos, reconversión laboral y diseño de sistemas
+            transparentes y explicables. El desafío será aprovechar el potencial
+            de estas tecnologías sin perder de vista los valores humanos.
+          </p>
+          <p class="section-text mb-0">
+            Prepararse para este futuro implica desarrollar competencias
+            digitales, pensamiento crítico y una visión ética de la innovación.
+          </p>
+        </div>
+
+        <!-- Formulario de contacto (no funcional, solo frontend) -->
+        <div class="col-lg-6">
+          <h5 class="mb-3">Formulario de contacto</h5>
+          <!-- 
+            Este formulario es solo de ejemplo.
+            Para hacerlo funcional, deberías procesar los datos con 
+            JavaScript, PHP u otro lenguaje en el servidor.
+          -->
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input
+                type="text"
+                class="form-control"
+                id="nombre"
+                placeholder="Ingresa tu nombre"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input
+                type="email"
+                class="form-control"
+                id="correo"
+                placeholder="tunombre@correo.com"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="tema" class="form-label">Tema de interés</label>
+              <select class="form-select" id="tema" required>
+                <option value="">Selecciona una opción</option>
+                <option value="cloud">Tecnologías Cloud</option>
+                <option value="ia">Inteligencia Artificial</option>
+                <option value="automatizacion">Automatización</option>
+                <option value="todo">Todas las anteriores</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea
+                class="form-control"
+                id="mensaje"
+                rows="4"
+                placeholder="Escribe tu consulta o comentario"
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="btn btn-gradient">
+              Enviar mensaje
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================
+       FOOTER
+       ========================================= -->
+  <footer class="py-3 bg-dark text-light">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <span>
+        © <span id="year"></span> Tecnologías Cloud, IA y Automatización.
+      </span>
+      <span>
+        Desarrollado por <strong>PALOMA VILLAVICENCIO</strong>
+        <!-- Puedes reemplazar por tu nombre real -->
+      </span>
+    </div>
+  </footer>
+
+  <!-- =========================================
+       SCRIPTS
+       ========================================= -->
+
+  <!-- Bootstrap JS (bundle incluye Popper) -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Script simple para mostrar el año actual en el footer -->
+  <script>
+    // Inserta dinámicamente el año actual en el span con id "year"
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

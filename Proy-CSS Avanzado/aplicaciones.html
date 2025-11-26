@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Aplicaciones de las tecnologías Cloud, Inteligencia Artificial y Automatización." />
+
+  <title>Aplicaciones - Cloud, IA y Automatización</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">
+        Cloud · IA · Automatización
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Mostrar u ocultar navegación"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <!-- 5 menús -->
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="historia.html">Historia</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="tipos.html">Tipos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="aplicaciones.html">Aplicaciones</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="futuro.html">Futuro</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div style="height: 70px;"></div>
+
+  <!-- HEADER + SLIDER -->
+  <header class="py-4 bg-light text-dark">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <h1 class="mb-3">Aplicaciones en la vida real</h1>
+          <p>
+            Cloud, IA y Automatización están presentes en salud, finanzas,
+            educación, industria y en nuestra vida diaria a través de servicios digitales.
+          </p>
+        </div>
+
+        <!-- Slider -->
+        <div class="col-lg-6">
+          <div
+            id="carouselAplicaciones"
+            class="carousel slide shadow rounded overflow-hidden"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="images/salud.jpg" class="d-block w-100" alt="Aplicaciones en salud" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Salud digital</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/finanzas.jpeg" class="d-block w-100" alt="Aplicaciones en finanzas" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Finanzas inteligentes</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img src="images/industria.jpeg" class="d-block w-100" alt="Aplicaciones en industria" />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Industria 4.0</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#carouselAplicaciones"
+              data-bs-slide="prev"
+            >
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Anterior</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#carouselAplicaciones"
+              data-bs-slide="next"
+            >
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Siguiente</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TEXTO + VIDEO -->
+  <section class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <div class="col-lg-6">
+          <h2 class="mb-3">Ejemplos de uso</h2>
+          <ul>
+            <li>
+              <strong>Salud:</strong> diagnósticos asistidos por IA, historias clínicas en la nube y teleconsulta.
+            </li>
+            <li>
+              <strong>Finanzas:</strong> detección de fraude, scoring crediticio y banca digital.
+            </li>
+            <li>
+              <strong>Educación:</strong> plataformas virtuales, aulas híbridas y analítica de aprendizaje.
+            </li>
+            <li>
+              <strong>Industria:</strong> mantenimiento predictivo, control de calidad automatizado y robots colaborativos.
+            </li>
+            <li>
+              <strong>Vida diaria:</strong> asistentes de voz, recomendaciones de contenido y domótica.
+            </li>
+          </ul>
+        </div>
+
+        <!-- Video -->
+        <div class="col-lg-6">
+          <h3 class="mb-3">Video de casos de uso</h3>
+          <div class="ratio ratio-16x9 shadow">
+            <iframe
+              src="https://www.youtube.com/embed/oV74Najm6Nc"
+              title="Aplicaciones de la IA y automatización"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- FORMULARIO -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="mb-4">Formulario de interés</h2>
+      <form>
+        <div class="mb-3">
+          <label for="nombreAplicaciones" class="form-label">Nombre completo</label>
+          <input type="text" class="form-control" id="nombreAplicaciones" required />
+        </div>
+        <div class="mb-3">
+          <label for="correoAplicaciones" class="form-label">Correo electrónico</label>
+          <input type="email" class="form-control" id="correoAplicaciones" required />
+        </div>
+        <div class="mb-3">
+          <label for="sectorAplicaciones" class="form-label">Sector que te interesa</label>
+          <select id="sectorAplicaciones" class="form-select" required>
+            <option value="">Selecciona una opción</option>
+            <option value="salud">Salud</option>
+            <option value="finanzas">Finanzas</option>
+            <option value="educacion">Educación</option>
+            <option value="industria">Industria</option>
+            <option value="vida-diaria">Vida diaria</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="mensajeAplicaciones" class="form-label">Mensaje</label>
+          <textarea id="mensajeAplicaciones" class="form-control" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-3 bg-dark text-light">
+    <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+      <span>© <span id="year"></span> Tecnologías Cloud, IA y Automatización.</span>
+      <span>Desarrollado por <strong>PALOMA VILLAVICENCIO</strong></span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
